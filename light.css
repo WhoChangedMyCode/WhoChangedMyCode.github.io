@@ -1,0 +1,55 @@
+*{
+    /* 初始化 */
+    margin:0;
+    padding:0;
+}
+body{
+    /* 100%窗口高度 */
+    min-height:100vh;
+    /* 彈性佈局 水平+垂直居中 */
+    display:flex;
+    justify-content:center;
+    align-items :center;
+    background-color:#06252e;
+}
+.container{
+    /* 投影效果 */
+    /* -webkit-box-reflect: below 1px linear-gradient
+    (transparent,rgba(0,0,0,0.2)); */
+    -webkit-box-reflect: below 1px -webkit-gradient
+    (linear, 0 0, 0 100%, from(transparent),
+    color-stop(.5, transparent), to(rgba(3,3,3,.2)))
+}
+h2{
+    /* 字符顔色 */
+    color:#fff;
+    /* 字符大小 */
+    font-size:96px;
+    /* 字體 */
+    font-family: 黑体;
+    /* 字符間距 */
+    letter-spacing:15px;
+    /* 轉爲大寫 */
+    text-transform:uppercase;
+
+    text-align:center;
+    line-height:76px;
+    outline:none;
+    /* 自定義屬性--c 可通過var函數對其調用 */
+    --c:lightseagreen;
+    /* 調用自定義屬性--c 設置字符陰影（發光效果） */
+    text-shadow:0 0 10px var(--c),
+    0 0 20px var(--c),
+    0 0 40px var(--c),
+    0 0 80px var(--c),
+    0 0 160px var(--c);
+    /* 執行動畫：動畫名 時長 綫性的 無限次播放 */
+    animation:animate 5s linear infinte;
+}
+/* 定義動畫 */
+@keyframes animate{
+    to{
+        /* 色相旋轉濾鏡（設置度數可改變顔色） */
+        filter: hue-rotate(360deg);
+    }
+}
