@@ -44,7 +44,7 @@ h2{
     0 0 80px var(--c),
     0 0 160px var(--c);
     /* 執行動畫：動畫名 時長 綫性的 無限次播放 */
-    animation:animate 5s linear infinte;
+    animation:animate 5s linear infinite;
 }
 /* 定義動畫 */
 @keyframes animate{
