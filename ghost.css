@@ -1,0 +1,97 @@
+*{
+    /* 初始化 */
+    margin:0;
+    padding:0;
+}
+
+.container{
+    /* 100%窗口高度 */
+    height:100vh;
+    /* 彈性佈局 居中 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* 溢出隱藏 */
+    overflow: hidden;
+    background-color: #0d1117;
+}
+
+.container{
+    /* 投影效果 */
+    -webkit-box-reflect: below 1px -webkit-gradient(linear, 0 0, 0 100%,
+    from(transparent), color-stop(.5, transparent),
+    to(rgba(3,3,3,.2)))
+}
+
+h2{
+    display: flex;
+    font-family: 黑体;
+    font-size: 160px;
+    color: #fff;
+    /* 轉大寫 */
+    text-transform: uppercase;
+
+    --c:rgb(224, 168, 215);
+    /* 調用自定義屬性--c 設置字符陰影（發光效果） */
+    text-shadow:0 0 10px var(--c),
+    0 0 20px var(--c),
+    0 0 40px var(--c),
+    0 0 80px var(--c),
+    0 0 160px var(--c);
+    /* 執行動畫：動畫名 時長 綫性的 無限次播放 */
+    animation:animate 5s linear infinite;
+}
+
+/* 定義動畫 */
+@keyframes animate{
+    to{
+        /* 色相旋轉濾鏡（設置度數可改變顔色） */
+        filter: hue-rotate(50deg);
+    }
+}
+
+h2 span{
+    /* 過度動畫 */
+    transition:1.5s;
+}
+
+h2:hover span{
+    /* 模糊 */
+    filter:blur(20px);
+    /* 不透明度 */
+    opacity: 0;
+    /* 放大 */
+    transform:scale(2);
+}
+
+/* 接下來為每一個span元素設置動畫延時時間 */
+h2 span:nth-child(1){
+    transition-delay:0.1s;
+}
+h2 span:nth-child(2){
+    transition-delay:0.2s;
+}
+h2 span:nth-child(3){
+    transition-delay:0.3s;
+}
+h2 span:nth-child(4){
+    transition-delay:0.4s;
+}
+h2 span:nth-child(5){
+    transition-delay:0.5s;
+}
+h2 span:nth-child(6){
+    transition-delay:0.6s;
+}
+h2 span:nth-child(7){
+    transition-delay:0.7s;
+}
+h2 span:nth-child(8){
+    transition-delay:0.8s;
+}
+h2 span:nth-child(9){
+    transition-delay:0.9s;
+}
+h2 span:nth-child(10){
+    transition-delay:1s;
+}
